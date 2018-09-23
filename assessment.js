@@ -66,6 +66,7 @@ function evensOnly() {
     }
   });
   console.log(evensArray);
+  return evensArray;
 }
 evensOnly();
 
@@ -90,12 +91,15 @@ console.log(trueFriends);
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
+var count = -1;
+var indexes = [];
 function indexFinder() {
-  var indexes = new Array();
+  randomNumbers.forEach(function(num){
+    count++;
+    indexes[count] = count;
+  });
 
-  for(let i=0; i<randomNumbers.length; i++){
-    indexes.push(i);
-  }
   console.log(indexes);
+  return indexes;
 }
 indexFinder();
